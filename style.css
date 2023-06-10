@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster+Two:ital@1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+html, body {
+    overflow-x: hidden;
+}
+    
+body {
+    margin:0;
+    background:#c9563b;
+    font-size:1.3em;
+    color:#ffe5e5;
+    font-family:sans-serif;
+    
+}
+  
+section {
+    float:left;
+    width:100%;
+    background:#fff;
+    position:relative;
+    box-shadow:0 0 5px 0px #333;
+    text-align: center;
+}
+  
+/* definindo style para o botão de rolagem */
+.arrow-wrap {
+    position:absolute;
+    z-index:1;
+    left:50%;
+    top:-5em;
+    margin-left:-5em;
+    background:#111;
+    width:10em;
+    height:10em;
+    padding:4em 2em;
+    border-radius:50%;
+    font-size:0.5em;
+    display:block;
+    box-shadow:0px 0px 10px 0px #676767;
+}
+  
+.arrow {
+    float:left;
+    position:relative;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 3em 3em 0 3em;
+    border-color: #c5bfbf transparent transparent transparent;
+    transform: rotate(360deg);
+}
+  
+.arrow:after {
+    content:'';
+    position:absolute;
+    top:-3.2em;
+    left:-3em;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 3em 3em 0 3em;
+    border-color: #111 transparent transparent transparent;
+    transform: rotate(360deg);
+}
+  
+.hint {
+    position:absolute;
+    top:0.6em;
+    width:100%;
+    left:0;
+    font-size:2em;
+    font-style:italic;
+    text-align:center;
+    color: #111;
+    opacity:0;
+}
+    
+.arrow-wrap:hover .hint {
+    opacity:1;
+}
+    
+@keyframes arrows {
+    0% { top:0; }
+    10% { top:12%; }
+    20% { top:0; }
+    30% { top:12%; }
+    40% { top:-12%; }
+    50% { top:12%; }
+    60% { top:0; }
+    70% { top:12%; }
+    80% { top:-12%; }
+    90% { top:12%; }
+    100% { top:0; }
+}
+
+@-webkit-keyframes arrows {
+    0% { top:0; }
+    10% { top:12%; }
+    20% { top:0; }
+    30% { top:12%; }
+    40% { top:-12%; }
+    50% { top:12%; }
+    60% { top:0; }
+    70% { top:12%; }
+    80% { top:-12%; }
+    90% { top:12%; }
+    100% { top:0; }
+}
+
+.arrow-wrap .arrow {
+    animation: arrows 2.8s 0.4s;
+    -webkit-animation: arrows 2.8s 0.4s;
+}
+
+    
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+  
+header h1, h2 {
+    margin:0;
+}
+ 
+header a {
+    color:#56dcee;
+    opacity:0.5;
+    text-decoration:none;
+}
+  
+header a:hover {
+    color:#333;
+    opacity:1;
+}
+  
+  
+.content {
+    float:left;
+    width:70%;
+    margin:0 15%;
+    padding:2em 0;
+}
+  
+h1 {
+    font-family:'Lobster Two';
+    font-weight:300;
+    font-size:4.5em;
+    color: #e7d8d8;
+}
+
+h2 {
+    font-family: 'Indie Flower';
+    font-weight:300;
+    font-size:1.5em;
+    margin-top:1em;
+    color: #111;
+}
+
+h3 {
+    font-family: 'Indie Flower';
+    font-weight:300;
+    font-size:2.5em;
+    color: #ff6961;
+    line-height: 1.2; 
+    margin-top: 70px; 
+    margin-bottom: 60px; 
+}
+
+h5 {
+    font-family: 'Indie Flower';
+    font-weight:300;
+    font-size:1em;
+    color: #111;
+    text-align: center; 
+    margin-bottom: 70px;
+}
+
+.rings-image {
+    height: 1.2em; 
+    width: auto; 
+    vertical-align: middle; 
+    margin-left: 10px; 
+}
+
+/* Botões yes and no*/
+
+.main {
+    min-height: 100vh; 
+    background-color: #e7d8d8;
+}
+
+.simbtn {
+    background-color: #fff;
+    color: #ff6961;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    width: 150px;
+    cursor: pointer;
+    margin-bottom: 20px;  
+}
+
+.naobtn {
+    background-color: #ff6961;
+    color: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    font-size: 1.2rem;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Estilos do footer */
+footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background-color: #ffffff;
+    color: #666666;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    box-shadow: 0 5px 0px rgba(0,0,0,0.1);
+}
+
+footer a {
+    color:#666666;  
+    text-decoration:none;
+}
+
+footer a:hover {
+    color:#ff6961;  
+}
+  
+/* Responsividade: */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size:3.5em;
+    }
+    h2 {
+        font-size:1.2em;
+    }
+    h3 {
+        font-size:1.8em;
+    }
+    .simbtn, .naobtn {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+        width: 120px;
+    }
+}
+
+/* Para smartphones e telas muito pequenas */
+@media (max-width: 480px) {
+    h1 {
+        font-size:2.5em;
+    }
+    h2 {
+        font-size:1em;
+    }
+    h3 {
+        font-size:1.5em;
+    }
+    .simbtn, .naobtn {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+        width: 100px;
+    }
+}
